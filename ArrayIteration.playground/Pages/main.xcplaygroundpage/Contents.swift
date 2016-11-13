@@ -15,7 +15,7 @@
  */
 // write your code here
 
-
+var cart: [String] = ["Chips", "Salsa", "Guacamole", "Red Wine"]
 
 
 
@@ -25,8 +25,10 @@
  */
 // write your code here
 
-
-
+var list: [Int] = []
+for x in 1...10 {
+    list.append(x)
+}
 
 
 
@@ -36,7 +38,9 @@
  */
 // write your code here
 
-
+for number in list {
+    print(number)
+}
 
 
 
@@ -47,7 +51,13 @@
  */
 // write your code here
 
-
+for item in cart {
+    if item != "Red Wine" {
+        print ("I'm hungry, I could really go for some \(item)")
+    } else {
+        print ("I'm thristy, I could really go for some \(item)")
+    }
+}
 
 
 
@@ -59,8 +69,15 @@
 // write your code here
 
 
+func printCart(groceries: Array<String>) {
+    var x = 0
+    for _ in 0..<groceries.count {
+        print (groceries[x])
+        x += 1
+    }
+}
 
-
+printCart(groceries: cart)
 
 
 
@@ -69,9 +86,21 @@
  */
 // write your code here
 
+var nameArray = ["Bill", "Adam", "Michael", "Hana", "Peter", "Vincent", "Shelley"]
 
+func printName(_ names: Array<String>) {
+    var x = 0
+    for _ in 0..<names.count {
+        if names[x] == "Michael" {
+        print ("Top of the morning \(names[x])")
+    } else {
+        print ("Good Morning \(names[x])")
+    }
+        x += 1
+    }
+}
 
-
+printName(nameArray)
 
 
 /*: question7
@@ -79,7 +108,19 @@
  */
 // write your code here
 
+let intArray = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
+func iterateArray (_ numbers: Array<Int>) {
+    var lessThan50: [Int] = []
+    for number in numbers {
+        if number < 50 {
+            lessThan50.append(number)
+        }
+    }
+    print (lessThan50)
+}
+
+iterateArray(intArray)
 
 
 
